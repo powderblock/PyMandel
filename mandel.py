@@ -2,14 +2,14 @@ import sys
 from collections import *
 
 # Width an height of output image
-width, height = 256, 256
+width, height = 1024, 1024
 
 # Named tuple for holding pixel information
 pixel = namedtuple('pixel', ['r', 'g', 'b'])
 imageArray = []
 
 magnify = 1.0
-max_iterations = 16
+max_iterations = 32
 # Header infomation:
 print("P6")
 # width and height are image size
@@ -25,7 +25,10 @@ for hy in range(0, height):
 			# if it is diviriging, break
 			if abs(z)>2:break
 		# Make the edge of the set colored. (R, G, B)
-		if(i < max_iterations): imageArray.append(pixel(0, 0, i * 16))
+		if(i < max_iterations):
+			temp = i * 16
+			if temp > 255: temp = 255
+			imageArray.append(pixel(0, 0, temp))
 		#It is is in the set, color it black
 		else: imageArray.append(pixel(0, 0, 0))
 # Once we have all of the pixels in the image processed, output their values:
