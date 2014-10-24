@@ -25,7 +25,7 @@ for hy in range(0, height):
 			if abs(z)>2:break
 		# Make the edge of the set colored. (R, G, B)
 		if(i < max_iterations):
-			if temp > i * 16: imageArray.append(pixel(0, 0, 255))
+			if i * 16 > 255: imageArray.append(pixel(0, 0, 255))
 			else: imageArray.append(pixel(0, 0, i * 16))
 		#It is is in the set, color it black
 		else: imageArray.append(pixel(0, 0, 0))
