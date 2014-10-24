@@ -26,7 +26,7 @@ for hy in range(0, height):
 		# Make the edge of the set colored. (R, G, B)
 		if(i < max_iterations):
 			if temp > i * 16: imageArray.append(pixel(0, 0, 255))
-			else: imageArray.append(pixel(0, 0, 255))
+			else: imageArray.append(pixel(0, 0, i * 16))
 		#It is is in the set, color it black
 		else: imageArray.append(pixel(0, 0, 0))
 # Once we have all of the pixels in the image processed, output their values:
