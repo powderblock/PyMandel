@@ -11,10 +11,9 @@ imageArray = []
 magnify = 1.0
 max_iterations = 32
 # Header infomation:
-print("P6")
 # width and height are image size
-# 255 (third number) is color depth of output image.
-print str(width)+" "+str(height)+"\n255\n"
+# 255 is color depth of output image.
+print "P6\n"+str(width)+" "+str(height)+"\n255\n"
 # Go through each pixel in the image:
 for hy in range(0, height):
 	for hx in range(0, width):
